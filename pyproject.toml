@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aclrag"
+version = "0.1.0"
+description = "A permission-aware RAG assistant: access groups on every chunk, a security filter on every query, and an evaluation that counts leaks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Baha Kırbaşoğlu" }]
+dependencies = []
+
+[project.optional-dependencies]
+azure = ["azure-search-documents>=11.6", "openai>=1.40"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+aclrag = "aclrag.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aclrag"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
