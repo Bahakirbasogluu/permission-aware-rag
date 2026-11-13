@@ -1,5 +1,7 @@
 # aclrag
 
+[![CI](https://github.com/Bahakirbasogluu/permission-aware-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/Bahakirbasogluu/permission-aware-rag/actions/workflows/ci.yml)
+
 A retrieval-augmented assistant for documents that not everyone may read. Two people can ask it the same question and get different answers, because it answers only from the documents the person asking has access to, and it says so when there are none.
 
 The design comes from an intranet assistant I built as a proof of concept for a hospital group. The code here is written from scratch and runs on an invented corpus; it contains no client code or data.
